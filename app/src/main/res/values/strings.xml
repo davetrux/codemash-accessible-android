@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Accessible Demo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="suspects">
+        <item>Colonel Mustard</item>
+        <item>Miss Scarlet</item>
+        <item>Professor Plum</item>
+        <item>Mrs. White</item>
+        <item>Mr. Green</item>
+        <item>Mrs. Peacock</item>
+    </string-array>
+
+    <string-array name="weapons">
+        <item>Knife</item>
+        <item>Rope</item>
+        <item>Candlestick</item>
+        <item>Revolver</item>
+        <item>Lead Pipe</item>
+        <item>Poison</item>
+    </string-array>
+
+    <string-array name="locations">
+        <item>Kitchen</item>
+        <item>Dining Room</item>
+        <item>Conservatory</item>
+        <item>Library</item>
+        <item>Billiard Room</item>
+        <item>Study</item>
+        <item>Hall</item>
+    </string-array>
+</resources>
