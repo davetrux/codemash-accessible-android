@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        List<Fragment> fragments = getFragments();
+        List<FragmentItem> fragments = getFragments();
 
         DemoPagerAdapter pageAdapter = new DemoPagerAdapter(getSupportFragmentManager(), fragments);
 
@@ -50,12 +50,14 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private List<Fragment> getFragments(){
+    private List<FragmentItem> getFragments(){
 
-        List<Fragment> fList = new ArrayList<Fragment>(3);
-        fList.add(new WhoFragment());
-        fList.add(new WhereFragment());
-        fList.add(new WhatFragment());
+        List<FragmentItem> fList = new ArrayList<>(3);
+
+
+        fList.add(new FragmentItem("Who", new WhoFragment()));
+        fList.add(new FragmentItem("Where", new WhereFragment()));
+        fList.add(new FragmentItem("What", new WhatFragment()));
 
         return fList;
     }
@@ -119,17 +121,16 @@ public class MainActivity extends AppCompatActivity
     }
 
     class DemoPagerAdapter extends FragmentPagerAdapter {
-        private String tabTitles[] = new String[] { "Who", "Where", "What" };
+        private List<FragmentItem> fragments;
 
-        private List<Fragment> fragments;
-
-        public DemoPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
+        public DemoPagerAdapter(FragmentManager fm, List<FragmentItem> fragments) {
             super(fm);
             this.fragments = fragments;
         }
         @Override
         public Fragment getItem(int position) {
-            return this.fragments.get(position);
+            FragmentItem item = this.fragments.get(position);
+            return item.getFragment();
         }
         @Override
         public int getCount() {
@@ -139,7 +140,8 @@ public class MainActivity extends AppCompatActivity
         @Override
         public CharSequence getPageTitle(int position) {
             // Generate title based on item position
-            return tabTitles[position];
+            FragmentItem item = this.fragments.get(position);
+            return item.getName();
         }
     }
 }
