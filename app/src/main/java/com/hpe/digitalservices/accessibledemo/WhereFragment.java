@@ -1,5 +1,6 @@
 package com.hpe.digitalservices.accessibledemo;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by trux on 9/12/16.
  */
-public class WhereFragment extends BaseFragment {
+public class WhereFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,10 +43,25 @@ public class WhereFragment extends BaseFragment {
         for (String weapon : weapons) {
             ClueItem item = new ClueItem();
             item.setNames(weapon);
-            item.setPhotos(R.drawable.rope_coil);
+            item.setPhotos(getDrawableByName(weapon));
             result.add(item);
         }
 
         return result;
+    }
+
+    private int getDrawableByName(String rawName) {
+
+        Context context = getContext();
+
+        String name = rawName.toLowerCase().replace(' ', '_');
+
+        int id = context.getResources().getIdentifier(name, "drawable", context.getPackageName());
+
+        if(id == 0) {
+            id = R.drawable.rope;
+        }
+
+        return id;
     }
 }

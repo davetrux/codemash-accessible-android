@@ -42,7 +42,7 @@ public class WhoFragment extends Fragment {
         for (String weapon : weapons) {
             ClueItem item = new ClueItem();
             item.setNames(weapon);
-            item.setPhotos(R.drawable.rope_coil);
+            item.setPhotos(R.drawable.rope);
             result.add(item);
         }
 

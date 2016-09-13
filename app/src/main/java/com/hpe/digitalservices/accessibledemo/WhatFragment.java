@@ -1,6 +1,8 @@
 package com.hpe.digitalservices.accessibledemo;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,7 +19,7 @@ import java.util.List;
  * http://game-icons.net/
  *
  */
-public class WhatFragment extends BaseFragment {
+public class WhatFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,10 +47,25 @@ public class WhatFragment extends BaseFragment {
         for (String weapon : weapons) {
             ClueItem item = new ClueItem();
             item.setNames(weapon);
-            item.setPhotos(R.drawable.rope_coil);
+            item.setPhotos(getDrawableByName(weapon));
             result.add(item);
         }
 
         return result;
+    }
+
+    private int getDrawableByName(String rawName) {
+
+        Context context = getContext();
+
+        String name = rawName.toLowerCase().replace(' ', '_');
+
+        int id = context.getResources().getIdentifier(name, "drawable", context.getPackageName());
+
+        if(id == 0) {
+            id = R.drawable.rope;
+        }
+
+        return id;
     }
 }
