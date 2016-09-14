@@ -1,6 +1,7 @@
 package com.hpe.digitalservices.accessibledemo;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,7 +32,8 @@ public class WhatFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
+        Drawable border = getContext().getDrawable(R.drawable.border);
+        recyclerView.addItemDecoration(new DividerItemDecoration(border));
         ClueViewAdapter adapter = new ClueViewAdapter(persons);
         recyclerView.setAdapter(adapter);
 
