@@ -1,5 +1,6 @@
 package com.hpe.digitalservices.accessibledemo;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,17 +36,32 @@ public class WhoFragment extends Fragment {
 
     private List<ClueItem> getData(){
 
-        List<String> weapons = Arrays.asList(getResources().getStringArray(R.array.suspects));
+        List<String> suspects = Arrays.asList(getResources().getStringArray(R.array.suspects));
 
-        List<ClueItem> result = new ArrayList<>(weapons.size());
+        List<ClueItem> result = new ArrayList<>(suspects.size());
 
-        for (String weapon : weapons) {
+        for (String suspect : suspects) {
             ClueItem item = new ClueItem();
-            item.setNames(weapon);
-            item.setPhotos(R.drawable.rope);
+            item.setNames(suspect);
+            item.setPhotos(getDrawableByName(suspect));
             result.add(item);
         }
 
         return result;
+    }
+
+    private int getDrawableByName(String rawName) {
+
+        Context context = getContext();
+
+        String name = rawName.toLowerCase().replace(".", "").replace(' ', '_');
+
+        int id = context.getResources().getIdentifier(name, "drawable", context.getPackageName());
+
+        if(id == 0) {
+            id = R.drawable.rope;
+        }
+
+        return id;
     }
 }
