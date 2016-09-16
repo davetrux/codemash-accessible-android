@@ -7,24 +7,34 @@ package com.hpe.digitalservices.accessibledemo;
  */
 public class ClueItem {
 
-    private int mPhoto;
+    private int photoId;
 
-    private String mName;
+    private String name;
+
+    private String description;
 
 
     public int getPhoto() {
-        return mPhoto;
+        return photoId;
     }
 
-    public void setPhotos(int photo) {
-        this.mPhoto = photo;
+    public void setPhoto(int photo) {
+        this.photoId = photo;
     }
 
     public String getName() {
-        return mName;
+        return name;
     }
 
-    public void setNames(String name) {
-        this.mName = name;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

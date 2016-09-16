@@ -45,8 +45,8 @@ public class WhoFragment extends Fragment {
 
         for (String suspect : suspects) {
             ClueItem item = new ClueItem();
-            item.setNames(suspect);
-            item.setPhotos(getDrawableByName(suspect));
+            item.setName(suspect);
+            item.setPhoto(getDrawableByName(suspect));
             result.add(item);
         }
 

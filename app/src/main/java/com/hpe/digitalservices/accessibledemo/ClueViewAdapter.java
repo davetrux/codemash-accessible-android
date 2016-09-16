@@ -2,6 +2,7 @@ package com.hpe.digitalservices.accessibledemo;
 
 
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,6 +67,11 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
 
             mItemName.setText(item.getName());
             mItemImage.setImageResource(item.getPhoto());
+
+            if(!TextUtils.isEmpty(item.getDescription())) {
+                mItemImage.setContentDescription(item.getDescription());
+            }
+
         }
     }
 }

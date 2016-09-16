@@ -48,8 +48,8 @@ public class WhatFragment extends Fragment {
 
         for (String weapon : weapons) {
             ClueItem item = new ClueItem();
-            item.setNames(weapon);
-            item.setPhotos(getDrawableByName(weapon));
+            item.setName(weapon);
+            item.setPhoto(getDrawableByName(weapon));
             result.add(item);
         }
 

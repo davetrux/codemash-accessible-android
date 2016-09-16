@@ -35,4 +35,13 @@
         <item>Hall</item>
     </string-array>
 
+    <string-array name="location_descriptions">
+        <item>Crossed knife and fork icon</item>
+        <item>Wine glass icon</item>
+        <item>Rose icon</item>
+        <item>Books icon</item>
+        <item>Eight ball icon</item>
+        <item>Quill and ink icon</item>
+        <item>Door icon</item>
+    </string-array>
 </resources>

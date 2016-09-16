@@ -38,14 +38,16 @@ public class WhereFragment extends Fragment {
 
     private List<ClueItem> getData(){
 
-        List<String> weapons = Arrays.asList(getResources().getStringArray(R.array.locations));
+        List<String> locations = Arrays.asList(getResources().getStringArray(R.array.locations));
+        List<String> descriptions = Arrays.asList(getResources().getStringArray(R.array.location_descriptions));
 
-        List<ClueItem> result = new ArrayList<>(weapons.size());
+        List<ClueItem> result = new ArrayList<>(locations.size());
 
-        for (String weapon : weapons) {
+        for (String place : locations) {
             ClueItem item = new ClueItem();
-            item.setNames(weapon);
-            item.setPhotos(getDrawableByName(weapon));
+            item.setName(place);
+            item.setDescription(descriptions.get(locations.indexOf(place)));
+            item.setPhoto(getDrawableByName(place));
             result.add(item);
         }
 
