@@ -19,15 +19,17 @@ import java.util.List;
 public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHolder>{
 
     private List<ClueItem> data;
+    private int drawableId;
 
-    public ClueViewAdapter(List<ClueItem> items) {
+    public ClueViewAdapter(List<ClueItem> items, int rowDrawable) {
         data = items;
+        drawableId = rowDrawable;
     }
 
     @Override
     public ClueViewAdapter.ItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View inflatedView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.clue_list_item, parent, false);
+                .inflate(drawableId, parent, false);
         return new ItemHolder(inflatedView);
     }
 

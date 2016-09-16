@@ -30,7 +30,7 @@ public class WhereFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         Drawable border = getContext().getDrawable(R.drawable.border);
         recyclerView.addItemDecoration(new DividerItemDecoration(border));
-        ClueViewAdapter adapter = new ClueViewAdapter(persons);
+        ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card);
         recyclerView.setAdapter(adapter);
 
         return v;

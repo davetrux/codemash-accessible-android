@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * Fragment for displaying the
  * Created by trux on 9/12/16.
  */
 public class WhoFragment extends Fragment {
@@ -30,7 +31,7 @@ public class WhoFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         Drawable border = getContext().getDrawable(R.drawable.border);
         recyclerView.addItemDecoration(new DividerItemDecoration(border));
-        ClueViewAdapter adapter = new ClueViewAdapter(persons);
+        ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card);
         recyclerView.setAdapter(adapter);
 
         return v;
