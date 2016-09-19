@@ -8,6 +8,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -39,14 +41,28 @@ public class GuessActivity extends BaseActivity {
         spinner.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                if(flag_spinner_isFirst){
-                    spinner.setAdapter(reasonList);
-                    flag_spinner_isFirst = false;
-                }
+                updateList(spinner);
                 view.onTouchEvent(motionEvent);
                 return true;
 
             }
         });
+
+        spinner.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+                if(keyCode == 66 && flag_spinner_isFirst) {
+                    updateList(spinner);
+                }
+                return false;
+            }
+        });
+    }
+
+    private void updateList(Spinner spinner){
+        if(flag_spinner_isFirst){
+            spinner.setAdapter(reasonList);
+            flag_spinner_isFirst = false;
+        }
     }
 }
