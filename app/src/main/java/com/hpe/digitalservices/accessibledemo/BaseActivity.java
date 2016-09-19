@@ -74,9 +74,7 @@ public class BaseActivity extends AppCompatActivity
 
         if (id == R.id.nav_slideshow) {
 
-            if(this instanceof GuessActivity){
-
-            } else {
+            if(!(this instanceof GuessActivity)){
                 Intent intent = new Intent(this, GuessActivity.class);
                 startActivity(intent);
             }

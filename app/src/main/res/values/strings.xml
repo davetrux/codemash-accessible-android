@@ -7,6 +7,12 @@
     <string name="action_settings">Settings</string>
     <string name="action_form">Make A Guess</string>
 
+    <string name="guess_who">Who Did It?</string>
+    <string name="guess_wwhere">Were?</string>
+    <string name="guess_what">With What Weapon?</string>
+    <string name="guess_why">Why Did They Do It?</string>
+    <string name="guess_action">Guess Now</string>
+
     <string-array name="suspects">
         <item>Colonel Mustard</item>
         <item>Miss Scarlet</item>
@@ -44,5 +50,18 @@
         <item>Quill and ink icon</item>
         <item>Door icon</item>
     </string-array>
+
+    <string-array name="reasons">
+        <item>Revenge</item>
+        <item>Crime of Passion</item>
+        <item>For the Money</item>
+        <item>Eliminate the Competition</item>
+        <item>Just Because</item>
+    </string-array>
+
+    <string-array name="initial_reason">
+       <item>Choose A Reason</item>
+    </string-array>
+
     <string name="title_activity_guess">GuessActivity</string>
 </resources>

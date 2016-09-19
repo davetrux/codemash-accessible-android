@@ -9,7 +9,94 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.hpe.digitalservices.accessibledemo.GuessActivity"
-    tools:showIn="@layout/activity_guess">
+    tools:context="com.hpe.digitalservices.accessibledemo.MainActivity"
+    tools:showIn="@layout/guess_bar_main">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/action_form"
+        android:id="@id/title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_what"
+        android:id="@+id/what_label"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/what_text"
+        android:layout_below="@+id/what_label"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_who"
+        android:id="@+id/who_label"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/where_text"
+        android:layout_alignParentStart="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/who_text"
+        android:layout_below="@+id/who_label"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_wwhere"
+        android:id="@+id/where_label"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/what_text"
+        android:layout_alignParentStart="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/where_text"
+        android:layout_below="@+id/where_label"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_why"
+        android:id="@+id/why_label"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/who_text"
+        android:layout_alignParentStart="true"
+        />
+
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/reasons"
+        android:text="@string/guess_action"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reasons"
+        android:paddingBottom="40dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/why_label"/>
 </RelativeLayout>
