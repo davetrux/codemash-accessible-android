@@ -50,8 +50,9 @@ public class GuessActivity extends BaseActivity {
 
         spinner.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
-                if(keyCode == 66 && flag_spinner_isFirst) {
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                Log.d("Key", Integer.toString(i));
+                if((i == 66 || i ==23) && flag_spinner_isFirst) {
                     updateList(spinner);
                 }
                 return false;
