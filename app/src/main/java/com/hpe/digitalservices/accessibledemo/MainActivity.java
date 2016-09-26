@@ -1,5 +1,6 @@
 package com.hpe.digitalservices.accessibledemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -37,6 +38,8 @@ public class MainActivity extends BaseActivity {
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(pager);
+
+        startService(new Intent(getApplication(), RecorderService.class));
 
     }
 

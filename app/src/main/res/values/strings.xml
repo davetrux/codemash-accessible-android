@@ -13,6 +13,8 @@
     <string name="guess_why">Why Did They Do It?</string>
     <string name="guess_action">Guess Now</string>
 
+    <string name="accessibility_service_label">Clue Service</string>
+
     <string-array name="suspects">
         <item>Colonel Mustard</item>
         <item>Miss Scarlet</item>
@@ -52,6 +54,7 @@
     </string-array>
 
     <string-array name="reasons">
+        <item>Choose A Reason</item>
         <item>Revenge</item>
         <item>Crime of Passion</item>
         <item>For the Money</item>
