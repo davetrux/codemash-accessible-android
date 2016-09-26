@@ -79,8 +79,9 @@ public class BaseActivity extends AppCompatActivity
                 startActivity(intent);
             }
 
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.nav_login) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
