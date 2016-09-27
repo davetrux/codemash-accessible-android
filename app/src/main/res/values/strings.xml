@@ -14,6 +14,9 @@
     <string name="guess_why">Why Did They Do It?</string>
     <string name="guess_action">Guess Now</string>
 
+    <string name="guess_correct">You are correct</string>
+    <string name="guess_wrong">Sorry, that\'s wrong</string>
+
     <string name="accessibility_service_label">Clue Service</string>
 
     <string-array name="suspects">
