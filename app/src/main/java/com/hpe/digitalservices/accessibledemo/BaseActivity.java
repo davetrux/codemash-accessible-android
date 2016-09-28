@@ -60,6 +60,10 @@ public class BaseActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent i = new Intent(this, PrefsActivity.class);
+            startActivity(i);
+
             return true;
         }
 
