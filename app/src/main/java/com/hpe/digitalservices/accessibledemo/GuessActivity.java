@@ -13,6 +13,9 @@ public class GuessActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Utils.setUiTheme(this);
+
         setContentView(R.layout.activity_guess);
 
         this.setUpNavigation();

@@ -85,4 +85,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string name="pref_category_ui">Look and Feel</string>
+    <string name="pref_theme_title">Theme</string>
+    <string name="pref_theme_summary">Use a dark theme for AccessibleClue</string>
+
 </resources>
