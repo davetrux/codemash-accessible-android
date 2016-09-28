@@ -10,7 +10,7 @@
         android:strokeColor="#fff"
         android:pathData="M0 0h512v512H0z" />
     <path
-        android:fillColor="#000000"
+        android:fillColor="?attr/icon_fill"
         android:pathData="M440.783 22.424c-2.382 .04 -4.63 .42 -6.646 1.178l-148.725 93.875-125.28
 165.15c.972 7.275 1.65 13.713 1.65 13.713L145.435 302 52.56 424.432a38.188
 26.876 37.184 0 1 30.288 9.912 38.188 26.876 37.184 0 1 18.03

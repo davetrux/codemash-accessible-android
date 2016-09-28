@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="clue_icon_fill">
+        <attr name="icon_fill" format="color" />
+    </declare-styleable>
+</resources>

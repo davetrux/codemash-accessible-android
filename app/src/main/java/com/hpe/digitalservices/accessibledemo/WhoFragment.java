@@ -31,13 +31,17 @@ public class WhoFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         Drawable border = getContext().getDrawable(R.drawable.border);
         recyclerView.addItemDecoration(new DividerItemDecoration(border));
-        ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card);
+
+        boolean isDarkTheme = Utils.isDarkTheme(this.getActivity());
+        ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card, isDarkTheme);
         recyclerView.setAdapter(adapter);
 
         return v;
     }
 
     private List<ClueItem> getData(){
+
+        boolean isDarkTheme = Utils.isDarkTheme(this.getActivity());
 
         List<String> suspects = Arrays.asList(getResources().getStringArray(R.array.suspects));
 
@@ -46,6 +50,7 @@ public class WhoFragment extends Fragment {
         for (String suspect : suspects) {
             ClueItem item = new ClueItem();
             item.setName(suspect);
+
             item.setPhoto(getDrawableByName(suspect));
             result.add(item);
         }
