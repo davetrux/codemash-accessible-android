@@ -7,14 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.hpe.digitalservices.accessibledemo.data.FragmentItem;
+import com.hpe.digitalservices.accessibledemo.fragments.WhatFragment;
+import com.hpe.digitalservices.accessibledemo.fragments.WhereFragment;
+import com.hpe.digitalservices.accessibledemo.fragments.WhoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +59,7 @@ public class MainActivity extends BaseActivity {
     class DemoPagerAdapter extends FragmentPagerAdapter {
         private List<FragmentItem> fragments;
 
-        public DemoPagerAdapter(FragmentManager fm, List<FragmentItem> fragments) {
+        DemoPagerAdapter(FragmentManager fm, List<FragmentItem> fragments) {
             super(fm);
             this.fragments = fragments;
         }

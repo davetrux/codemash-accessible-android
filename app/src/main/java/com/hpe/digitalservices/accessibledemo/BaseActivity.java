@@ -119,9 +119,9 @@ public class BaseActivity extends AppCompatActivity
     }
 
 
-    /*
+    /**
      * The listener that responds to intents sent back from the service
-     */
+     **/
     protected BroadcastReceiver onThemeChange = new BroadcastReceiver() {
 
         @Override

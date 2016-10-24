@@ -14,11 +14,10 @@ public class PrefsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /**
+         *  Accessibility feature
+         */
         Utils.setUiTheme(this);
-
-        //android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        //assert actionBar != null;
-        //actionBar.setDisplayHomeAsUpEnabled(true);
 
         getFragmentManager().beginTransaction().replace(android.R.id.content, new CluePreferenceFragment()).commit();
     }
@@ -42,6 +41,9 @@ public class PrefsActivity extends AppCompatActivity {
                 //Keep the intent local to the application
                 LocalBroadcastManager.getInstance(this.getActivity()).sendBroadcast(sendBack);
 
+                /**
+                 * Accessibility Feature
+                 */
                 Utils.changeTheme(this.getActivity());
 
             }

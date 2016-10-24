@@ -4,7 +4,6 @@ package com.hpe.digitalservices.accessibledemo;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.graphics.drawable.VectorDrawableCompat;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -14,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.hpe.digitalservices.accessibledemo.data.*;
 
 import java.util.List;
 
@@ -31,6 +31,10 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
     public ClueViewAdapter(List<ClueItem> items, int rowDrawable, boolean isDarkTheme) {
         data = items;
         drawableId = rowDrawable;
+
+        /**
+         * Accessibility Feature
+         */
         if(isDarkTheme) {
             themeId = R.style.DarkTheme;
         } else {
@@ -56,12 +60,12 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
         return data.size();
     }
 
-    public static class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    static class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private ImageView mItemImage;
         private TextView mItemName;
         private Context context;
-        public ItemHolder(View v) {
+        ItemHolder(View v) {
             super(v);
 
             mItemImage = (ImageView) v.findViewById(R.id.item_image);
@@ -75,7 +79,7 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
             Log.d("RecyclerView", "CLICK!");
         }
 
-        public void bindPhoto(ClueItem item) {
+        void bindPhoto(ClueItem item) {
 
             mItemName.setText(item.getName());
 
@@ -85,6 +89,9 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
             mItemImage.setImageDrawable(icon);
 
             if(!TextUtils.isEmpty(item.getDescription())) {
+                /**
+                 * Accessibility feature
+                 */
                 mItemImage.setContentDescription(item.getDescription());
             }
 

@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo;
+package com.hpe.digitalservices.accessibledemo.fragments;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -9,6 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.hpe.digitalservices.accessibledemo.ClueViewAdapter;
+import com.hpe.digitalservices.accessibledemo.DividerItemDecoration;
+import com.hpe.digitalservices.accessibledemo.R;
+import com.hpe.digitalservices.accessibledemo.Utils;
+import com.hpe.digitalservices.accessibledemo.data.ClueItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +37,7 @@ public class WhereFragment extends Fragment {
         Drawable border = getContext().getDrawable(R.drawable.border);
         recyclerView.addItemDecoration(new DividerItemDecoration(border));
 
+        /** Accessibility Feature **/
         boolean isDarkTheme = Utils.isDarkTheme(this.getActivity());
         ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card, isDarkTheme);
         recyclerView.setAdapter(adapter);

@@ -9,7 +9,7 @@
     <string name="action_login">Login</string>
 
     <string name="guess_who">Who Did It?</string>
-    <string name="guess_wwhere">Were?</string>
+    <string name="guess_wwhere">Where?</string>
     <string name="guess_what">With What Weapon?</string>
     <string name="guess_why">Why Did They Do It?</string>
     <string name="guess_action">Guess Now</string>
@@ -74,8 +74,9 @@
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">Email Address</string>
     <string name="prompt_password">Password (optional)</string>
+    <string name="content_password">Optional Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>

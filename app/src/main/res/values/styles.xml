@@ -15,6 +15,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- Accessibility Feature -->
     <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="icon_fill">#000000</item>
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -22,6 +23,7 @@
             <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Accessibility Feature -->
     <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="icon_fill">#ffffff</item>
     </style>

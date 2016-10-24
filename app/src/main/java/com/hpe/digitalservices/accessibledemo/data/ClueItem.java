@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo;
+package com.hpe.digitalservices.accessibledemo.data;
 
 /**
  * Data transfer object for assigning images and names

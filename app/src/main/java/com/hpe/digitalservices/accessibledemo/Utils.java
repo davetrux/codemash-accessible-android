@@ -6,24 +6,26 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 /**
+ * Utility functions for manipulating a theme change
+ *
  * Created by trux on 9/28/16.
  */
 
 public class Utils {
 
-    static final String THEME_INTENT = "themechange";
-    static final String THEME_KEY = "theme";
+    public static final String THEME_INTENT = "themechange";
+    public static final String THEME_KEY = "theme";
 
     /**
      * Set the theme of the Activity, and restart it by creating a new Activity of the same type.
      */
 
-    static void changeTheme(Activity activity) {
+    public static void changeTheme(Activity activity) {
         activity.finish();
         activity.startActivity(new Intent(activity, activity.getClass()));
     }
 
-    static void setUiTheme(Activity activity) {
+    public static void setUiTheme(Activity activity) {
 
         if(isDarkTheme(activity)) {
             activity.setTheme(R.style.DarkTheme);
@@ -33,7 +35,7 @@ public class Utils {
 
     }
 
-    static boolean isDarkTheme(Activity activity) {
+    public static boolean isDarkTheme(Activity activity) {
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(activity.getBaseContext());
 

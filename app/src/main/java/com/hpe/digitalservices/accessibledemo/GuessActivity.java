@@ -1,6 +1,5 @@
 package com.hpe.digitalservices.accessibledemo;
 
-import android.icu.text.DateFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
