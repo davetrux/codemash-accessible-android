@@ -32,11 +32,11 @@ public class MainActivity extends BaseActivity {
 
         DemoPagerAdapter pageAdapter = new DemoPagerAdapter(getSupportFragmentManager(), fragments);
 
-        ViewPager pager = (ViewPager)findViewById(R.id.viewpager);
+        ViewPager pager = findViewById(R.id.viewpager);
         pager.setAdapter(pageAdapter);
         pager.setOffscreenPageLimit(3);
         // Give the TabLayout the ViewPager
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(pager);
 
         startService(new Intent(getApplication(), RecorderService.class));

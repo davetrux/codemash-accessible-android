@@ -14,7 +14,7 @@ public class PrefsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        /**
+        /*
          *  Accessibility feature
          */
         Utils.setUiTheme(this);
@@ -41,7 +41,7 @@ public class PrefsActivity extends AppCompatActivity {
                 //Keep the intent local to the application
                 LocalBroadcastManager.getInstance(this.getActivity()).sendBroadcast(sendBack);
 
-                /**
+                /*
                  * Accessibility Feature
                  */
                 Utils.changeTheme(this.getActivity());

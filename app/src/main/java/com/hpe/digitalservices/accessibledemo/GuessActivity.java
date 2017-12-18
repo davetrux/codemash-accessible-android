@@ -19,14 +19,14 @@ public class GuessActivity extends BaseActivity {
 
         this.setUpNavigation();
 
-        final Spinner spinner = (Spinner) findViewById(R.id.reasons);
+        final Spinner spinner = findViewById(R.id.reasons);
 
         final ArrayAdapter<CharSequence> reasonList = ArrayAdapter.createFromResource(this, R.array.reasons, android.R.layout.simple_spinner_item);
         reasonList.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(reasonList);
 
-        Button guessButton = (Button) findViewById(R.id.submit);
+        Button guessButton = findViewById(R.id.submit);
 
         guessButton.setOnClickListener(new View.OnClickListener() {
             @Override

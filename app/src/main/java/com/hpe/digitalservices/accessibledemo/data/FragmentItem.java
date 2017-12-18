@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 /**
  * Data transfer object
  *
- * Created by trux on 9/13/16.
+ * @author trux on 9/13/16.
  */
 public class FragmentItem {
 

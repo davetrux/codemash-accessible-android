@@ -4,7 +4,7 @@ package com.hpe.digitalservices.accessibledemo;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.graphics.drawable.VectorDrawableCompat;
-import android.support.v7.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * Adapter for filling list items with names and images
  *
- * Created by trux on 9/13/16.
+ * @author trux on 9/13/16
  */
 public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHolder>{
 
@@ -32,7 +32,7 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
         data = items;
         drawableId = rowDrawable;
 
-        /**
+        /*
          * Accessibility Feature
          */
         if(isDarkTheme) {
@@ -68,8 +68,8 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
         ItemHolder(View v) {
             super(v);
 
-            mItemImage = (ImageView) v.findViewById(R.id.item_image);
-            mItemName = (TextView) v.findViewById(R.id.item_name);
+            mItemImage = v.findViewById(R.id.item_image);
+            mItemName = v.findViewById(R.id.item_name);
             context = v.getContext();
             v.setOnClickListener(this);
         }
@@ -89,7 +89,7 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
             mItemImage.setImageDrawable(icon);
 
             if(!TextUtils.isEmpty(item.getDescription())) {
-                /**
+                /*
                  * Accessibility feature
                  */
                 mItemImage.setContentDescription(item.getDescription());

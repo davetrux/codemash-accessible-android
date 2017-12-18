@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by trux on 9/12/16.
+ * @author trux on 9/12/16.
  *
  * http://game-icons.net/
  *
@@ -36,13 +36,13 @@ public class WhatFragment extends Fragment {
 
         List<ClueItem> persons = getData();
 
-        RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = v.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         Drawable border = getContext().getDrawable(R.drawable.border);
         recyclerView.addItemDecoration(new DividerItemDecoration(border));
 
 
-        /** Accessibility Feature **/
+        // Accessibility Feature
         boolean isDarkTheme = Utils.isDarkTheme(this.getActivity());
 
         ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card, isDarkTheme);

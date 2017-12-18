@@ -13,19 +13,19 @@ import android.preference.PreferenceManager;
 
 public class Utils {
 
-    public static final String THEME_INTENT = "themechange";
-    public static final String THEME_KEY = "theme";
+    static final String THEME_INTENT = "themechange";
+    static final String THEME_KEY = "theme";
 
     /**
      * Set the theme of the Activity, and restart it by creating a new Activity of the same type.
      */
 
-    public static void changeTheme(Activity activity) {
+    static void changeTheme(Activity activity) {
         activity.finish();
         activity.startActivity(new Intent(activity, activity.getClass()));
     }
 
-    public static void setUiTheme(Activity activity) {
+    static void setUiTheme(Activity activity) {
 
         if(isDarkTheme(activity)) {
             activity.setTheme(R.style.DarkTheme);

@@ -1,16 +1,15 @@
 package com.hpe.digitalservices.accessibledemo;
 
-/**
- * Created by trux on 9/23/16.
- *
- * https://gist.github.com/qihnus/1909616#file-recorderservice-java
- */
-
 import android.accessibilityservice.AccessibilityService;
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 
+/**
+ * @author trux on 9/23/16.
+ *
+ * https://gist.github.com/qihnus/1909616#file-recorderservice-java
+ */
 public class RecorderService extends AccessibilityService {
 
     static final String TAG = "RecorderService";

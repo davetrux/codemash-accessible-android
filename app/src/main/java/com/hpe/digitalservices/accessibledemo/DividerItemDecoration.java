@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by trux on 9/14/16.
+ * @author trux
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
@@ -20,7 +20,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     public void getItemOffsets (Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
         if (mDivider == null) return;
-        if (parent.getChildPosition(view) < 1) return;
+        if (parent.getChildAdapterPosition(view) < 1) return;
 
         if (getOrientation(parent) == LinearLayoutManager.VERTICAL) outRect.top = mDivider.getIntrinsicHeight();
         else outRect.left = mDivider.getIntrinsicWidth();
