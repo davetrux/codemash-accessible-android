@@ -1,7 +1,7 @@
-#Android Accessibility Demo
+#Accessibility in Android
 An Android app demonstrating different aspects of accessibility.
 
-Presented during the [October 2016 Google Developer Group meeting](https://www.meetup.com/Detroit-Google-Developers-Group/events/234252328/) in Detroit.
+Presented during a [CodeMash 2018](http://www.codemash.org/sessions/?id=7267) in Sandusky, OH.
 
 ##Slides
 Slides are included in the repo.
