@@ -1,8 +1,6 @@
 package com.hpe.digitalservices.accessibledemo;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,7 +19,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
  */
 public class LoginActivity extends AppCompatActivity  {
 
-    // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
@@ -38,6 +35,10 @@ public class LoginActivity extends AppCompatActivity  {
         mEmailView = findViewById(R.id.email);
 
         mPasswordView = findViewById(R.id.password);
+
+        // Accessibility feature:
+        //
+        // Handle enter key as a login action
         mPasswordView.setOnEditorActionListener((textView, id, keyEvent) -> {
             if (id == R.id.login || id == EditorInfo.IME_NULL) {
                 attemptLogin();
@@ -53,10 +54,6 @@ public class LoginActivity extends AppCompatActivity  {
         mProgressView = findViewById(R.id.login_progress);
     }
 
-    @TargetApi(Build.VERSION_CODES.O)
-    private void disableAutoFill() {
-        getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
-    }
     /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
@@ -112,11 +109,14 @@ public class LoginActivity extends AppCompatActivity  {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+
+            // Hide the keyboard
             InputMethodManager inputManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             if(inputManager != null) {
                 inputManager.hideSoftInputFromWindow(mPasswordView.getWindowToken(), 0);
             }
 
+            // Attempt a (fake) login
             loginObservable(email, password)
                     .subscribeOn(AndroidSchedulers.mainThread())
                     .doOnSubscribe(__ -> showProgress(true))
@@ -124,6 +124,7 @@ public class LoginActivity extends AppCompatActivity  {
                         if(!success) {
                             showProgress(false);
                             mPasswordView.setError(getString(R.string.error_incorrect_password));
+                            mPasswordView.announceForAccessibility(getString(R.string.error_incorrect_password));
                             mPasswordView.requestFocus();
                             if(inputManager != null) {
                                 inputManager.showSoftInput(mPasswordView, 0);
@@ -171,8 +172,8 @@ public class LoginActivity extends AppCompatActivity  {
             } catch (InterruptedException e) {
                 return false;
             }
-            int length = email.length() + password.length();
-            return length % 3 == 0;
+            // 5 or 10 letter passwords fail (for demonstration purposes)
+            return password.length() % 5 == 0;
         });
     }
 }

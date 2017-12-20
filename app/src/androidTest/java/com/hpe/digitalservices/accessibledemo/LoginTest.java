@@ -2,10 +2,13 @@ package com.hpe.digitalservices.accessibledemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
+
+import android.support.test.espresso.contrib.AccessibilityChecks;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +30,12 @@ public class LoginTest {
 
     @Rule
     public ActivityTestRule<LoginActivity> mActivityRule = new ActivityTestRule(LoginActivity.class);
+
+    @BeforeClass
+    public static void enableAccessibilityChecks() {
+        // https://www.ebayinc.com/stories/blogs/tech/android-accessibility-automation-with-espresso/
+        AccessibilityChecks.enable();
+    }
 
     @Test
     public void testEmailError() {
