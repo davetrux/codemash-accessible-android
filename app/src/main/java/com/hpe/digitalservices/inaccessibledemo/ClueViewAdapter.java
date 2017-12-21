@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo;
+package com.hpe.digitalservices.inaccessibledemo;
 
 
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.hpe.digitalservices.accessibledemo.data.*;
+import com.hpe.digitalservices.inaccessibledemo.data.*;
 
 import java.util.List;
 
@@ -92,7 +92,7 @@ public class ClueViewAdapter extends RecyclerView.Adapter<ClueViewAdapter.ItemHo
                 /*
                  * Accessibility feature
                  */
-                mItemImage.setContentDescription(item.getDescription());
+                // mItemImage.setContentDescription(item.getDescription());
             }
 
         }

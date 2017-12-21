@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo;
+package com.hpe.digitalservices.inaccessibledemo;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo;
+package com.hpe.digitalservices.inaccessibledemo;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;

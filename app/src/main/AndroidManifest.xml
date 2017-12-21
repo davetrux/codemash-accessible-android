@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hpe.digitalservices.accessibledemo">
+    package="com.hpe.digitalservices.inaccessibledemo">
 
     <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.hpe.digitalservices.inaccessibledemo.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,12 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GuessActivity"
+            android:name="com.hpe.digitalservices.inaccessibledemo.GuessActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service
-            android:name=".RecorderService"
+            android:name="com.hpe.digitalservices.inaccessibledemo.RecorderService"
             android:label="@string/accessibility_service_label"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
@@ -40,10 +40,10 @@
         </service>
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.hpe.digitalservices.inaccessibledemo.LoginActivity"
             android:label="@string/title_activity_login" />
 
-        <activity android:name=".PrefsActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name="com.hpe.digitalservices.inaccessibledemo.PrefsActivity" android:parentActivityName="com.hpe.digitalservices.inaccessibledemo.MainActivity"/>
     </application>
 
 </manifest>

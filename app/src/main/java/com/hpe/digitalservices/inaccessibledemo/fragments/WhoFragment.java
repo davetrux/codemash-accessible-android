@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo.fragments;
+package com.hpe.digitalservices.inaccessibledemo.fragments;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -10,11 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hpe.digitalservices.accessibledemo.ClueViewAdapter;
-import com.hpe.digitalservices.accessibledemo.DividerItemDecoration;
-import com.hpe.digitalservices.accessibledemo.R;
-import com.hpe.digitalservices.accessibledemo.ThemeUtils;
-import com.hpe.digitalservices.accessibledemo.data.ClueItem;
+import com.hpe.digitalservices.inaccessibledemo.ClueViewAdapter;
+import com.hpe.digitalservices.inaccessibledemo.DividerItemDecoration;
+import com.hpe.digitalservices.inaccessibledemo.R;
+import com.hpe.digitalservices.inaccessibledemo.ThemeUtils;
+import com.hpe.digitalservices.inaccessibledemo.data.ClueItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;

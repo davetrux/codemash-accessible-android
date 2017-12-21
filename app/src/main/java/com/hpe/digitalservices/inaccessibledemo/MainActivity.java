@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo;
+package com.hpe.digitalservices.inaccessibledemo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
-import com.hpe.digitalservices.accessibledemo.data.FragmentItem;
-import com.hpe.digitalservices.accessibledemo.fragments.WhatFragment;
-import com.hpe.digitalservices.accessibledemo.fragments.WhereFragment;
-import com.hpe.digitalservices.accessibledemo.fragments.WhoFragment;
+import com.hpe.digitalservices.inaccessibledemo.data.FragmentItem;
+import com.hpe.digitalservices.inaccessibledemo.fragments.WhatFragment;
+import com.hpe.digitalservices.inaccessibledemo.fragments.WhereFragment;
+import com.hpe.digitalservices.inaccessibledemo.fragments.WhoFragment;
 
 import java.util.ArrayList;
 import java.util.List;

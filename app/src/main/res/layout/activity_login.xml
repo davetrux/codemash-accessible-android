@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.hpe.digitalservices.accessibledemo.LoginActivity">
+    tools:context="com.hpe.digitalservices.inaccessibledemo.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -36,8 +36,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/prompt_email"
-                android:labelFor="@id/email"/>
+                android:text="@string/prompt_email"/>
+                <!--android:labelFor="@id/email"-->
+
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.hpe.digitalservices.accessibledemo.data;
+package com.hpe.digitalservices.inaccessibledemo.data;
 
 import android.support.v4.app.Fragment;
 
