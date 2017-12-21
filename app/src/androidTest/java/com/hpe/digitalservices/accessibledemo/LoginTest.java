@@ -31,6 +31,7 @@ public class LoginTest {
     @Rule
     public ActivityTestRule<LoginActivity> mActivityRule = new ActivityTestRule(LoginActivity.class);
 
+    // Accessibility Feature
     @BeforeClass
     public static void enableAccessibilityChecks() {
         // https://www.ebayinc.com/stories/blogs/tech/android-accessibility-automation-with-espresso/
