@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Utils.setUiTheme(this);
+        ThemeUtils.setUiTheme(this);
 
         setContentView(R.layout.activity_main);
 

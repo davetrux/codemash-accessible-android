@@ -8,10 +8,10 @@ import android.preference.PreferenceManager;
 /**
  * Utility functions for manipulating a theme change
  *
- * Created by trux on 9/28/16.
+ * @author trux on 9/28/16.
  */
 
-public class Utils {
+public class ThemeUtils {
 
     static final String THEME_INTENT = "themechange";
     static final String THEME_KEY = "theme";

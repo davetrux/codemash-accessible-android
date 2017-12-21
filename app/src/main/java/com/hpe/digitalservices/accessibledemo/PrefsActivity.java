@@ -17,7 +17,7 @@ public class PrefsActivity extends AppCompatActivity {
         /*
          *  Accessibility feature
          */
-        Utils.setUiTheme(this);
+        ThemeUtils.setUiTheme(this);
 
         getFragmentManager().beginTransaction().replace(android.R.id.content, new CluePreferenceFragment()).commit();
     }
@@ -34,9 +34,9 @@ public class PrefsActivity extends AppCompatActivity {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if (key.equals(Utils.THEME_KEY)) {
+            if (key.equals(ThemeUtils.THEME_KEY)) {
 
-                Intent sendBack = new Intent(Utils.THEME_INTENT);
+                Intent sendBack = new Intent(ThemeUtils.THEME_INTENT);
 
                 //Keep the intent local to the application
                 LocalBroadcastManager.getInstance(this.getActivity()).sendBroadcast(sendBack);
@@ -44,7 +44,7 @@ public class PrefsActivity extends AppCompatActivity {
                 /*
                  * Accessibility Feature
                  */
-                Utils.changeTheme(this.getActivity());
+                ThemeUtils.changeTheme(this.getActivity());
 
             }
         }

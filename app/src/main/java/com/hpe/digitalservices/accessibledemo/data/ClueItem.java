@@ -3,7 +3,7 @@ package com.hpe.digitalservices.accessibledemo.data;
 /**
  * Data transfer object for assigning images and names
  *
- * Created by trux on 9/13/16.
+ * @author trux on 9/13/16.
  */
 public class ClueItem {
 

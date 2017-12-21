@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import com.hpe.digitalservices.accessibledemo.ClueViewAdapter;
 import com.hpe.digitalservices.accessibledemo.DividerItemDecoration;
 import com.hpe.digitalservices.accessibledemo.R;
-import com.hpe.digitalservices.accessibledemo.Utils;
+import com.hpe.digitalservices.accessibledemo.ThemeUtils;
 import com.hpe.digitalservices.accessibledemo.data.ClueItem;
 
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public class WhereFragment extends Fragment {
         /*
         * Accessibility Feature
         */
-        boolean isDarkTheme = Utils.isDarkTheme(this.getActivity());
+        boolean isDarkTheme = ThemeUtils.isDarkTheme(this.getActivity());
         ClueViewAdapter adapter = new ClueViewAdapter(persons, R.layout.clue_list_card, isDarkTheme);
         recyclerView.setAdapter(adapter);
 

@@ -109,11 +109,11 @@ public class BaseActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
 
-        IntentFilter filter = new IntentFilter(Utils.THEME_INTENT);
+        IntentFilter filter = new IntentFilter(ThemeUtils.THEME_INTENT);
         LocalBroadcastManager.getInstance(this).registerReceiver(onThemeChange, filter);
 
         if(themeChanged) {
-            Utils.changeTheme(this);
+            ThemeUtils.changeTheme(this);
             themeChanged = false;
         }
     }

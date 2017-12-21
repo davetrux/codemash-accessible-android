@@ -15,7 +15,9 @@ import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 
 /**
- * A login screen that offers login via email/password.
+ * A login screen that offers login via email/password
+ *
+ * @author trux
  */
 public class LoginActivity extends AppCompatActivity  {
 
@@ -28,7 +30,7 @@ public class LoginActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Utils.setUiTheme(this);
+        ThemeUtils.setUiTheme(this);
 
         setContentView(R.layout.activity_login);
         // Set up the login form.
