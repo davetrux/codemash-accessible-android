@@ -9,6 +9,9 @@ import android.view.accessibility.AccessibilityEvent;
  * @author trux on 9/23/16.
  *
  * https://gist.github.com/qihnus/1909616#file-recorderservice-java
+ *
+ * This is a sample of how to use an AccessibiltyService. It only
+ * logs data, it doesn't do anything else
  */
 public class RecorderService extends AccessibilityService {
 
