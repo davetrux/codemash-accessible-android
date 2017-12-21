@@ -36,6 +36,9 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     // Android runner and rules support
+
+    // As of 12/17, these are older versions due to an issue with espresso-accessibility in v 3
+    // https://stackoverflow.com/questions/47317384/multiple-dex-files-define-landroid-support-test-espresso-accessibility-rattr
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
 
