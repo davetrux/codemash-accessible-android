@@ -32,7 +32,7 @@ public class WhatFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.who_fragment, container, false);
+        View v = inflater.inflate(R.layout.list_fragment, container, false);
 
         List<ClueItem> persons = getData();
 
